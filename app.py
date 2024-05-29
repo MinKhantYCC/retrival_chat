@@ -1,6 +1,8 @@
 import streamlit as st
 from chat import get_response
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
+import nltk
+nltk.download('punkt')
 
 def clear_input_field():
     st.session_state.user_question = st.session_state.user_input
